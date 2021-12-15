@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     tools:context=".MainActivity">
-    
+
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
@@ -51,6 +51,23 @@
         android:layout_below="@+id/btnsignup"
         />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/usuario" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/usuario" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="430dp"
+        app:srcCompat="@drawable/usuario" />
 
 
 </RelativeLayout>

@@ -1,8 +1,22 @@
 package com.jonr.loginsqlite;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
+
+import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
+
+import com.jonr.loginsqlite.content.Products;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -11,4 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
+
+
+
 }
