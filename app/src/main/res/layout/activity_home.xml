@@ -7,6 +7,7 @@
     android:background="@drawable/style_image"
     tools:context=".HomeActivity"
     >
+
     <LinearLayout
         style="@style/Widget.loginsqlite.Backdrop"
         android:layout_width="match_parent"
@@ -14,10 +15,30 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingTop="100dp"
-        android:paddingBottom="100dp"
-        >
+        android:paddingBottom="100dp">
 
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:onClick="irActividad2"
+            android:text="Bienvenidos, ver menús"
+            android:textStyle="bold" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/product_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/restaurat"
+            android:paddingStart="@dimen/product_grid_spacing"
+            android:paddingEnd="@dimen/product_grid_spacing"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -26,32 +47,17 @@
             android:id="@+id/app_bar"
 
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="50dp"
+
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+
             app:title="@string/app_name"
             app:navigationIcon="@drawable/ic_baseline_menu_24"
             app:titleTextColor="@color/black"
+
             />
     </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/product_grid"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/puente"
-        android:paddingStart="@dimen/product_grid_spacing"
-        android:paddingEnd="@dimen/product_grid_spacing"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/miximage"
-            android:layout_margin="@dimen/product_grid_card_image_height"
-             />
-
-    </androidx.core.widget.NestedScrollView>
 
 
 </FrameLayout>

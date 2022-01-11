@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity"
+    >
+
     <item
         android:id="@+id/search"
-        android:icon="@drawable/ic_baseline_search_24"
-        android:title="title"
+        android:title="Buscar"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="115"
+        app:showAsAction="always|collapseActionView"
 
         />
     <item
         android:id="@+id/filter"
         android:icon="@drawable/ic_baseline_filter_alt_24"
-        android:title="Title"
-
+        android:title="Acerca de..."
+        app:showAsAction="always|collapseActionView"
         />
+    <item
+        android:id="@+id/menuFragmento1"
+        android:title="Fragmento 1" />
+    <item
+        android:id="@+id/menuFragmento2"
+        android:title="Fragmento 2" />
+    <item
+        android:id="@+id/menuFragmento3"
+        android:title="Fragmento 3" />
 
 </menu>
