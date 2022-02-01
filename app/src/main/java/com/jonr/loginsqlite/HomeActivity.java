@@ -33,6 +33,18 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    public void irActividad3(View vista){
+        Intent miIntent = new Intent(this, MainActivity3.class);
+        startActivity(miIntent);
+
+    }
+
+    public void irAMenulistview(View vista){
+        Intent miIntent = new Intent(this, Menulistview.class);
+        startActivity(miIntent);
+
+    }
+
 
 
 }

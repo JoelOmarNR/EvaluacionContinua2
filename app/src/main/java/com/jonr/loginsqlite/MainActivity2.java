@@ -24,11 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
-    public void irAMenulistview(View vista){
-        Intent miIntent = new Intent(this, Menulistview.class);
-        startActivity(miIntent);
 
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

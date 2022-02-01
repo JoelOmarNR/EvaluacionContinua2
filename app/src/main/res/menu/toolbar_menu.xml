@@ -21,12 +21,12 @@
         />
     <item
         android:id="@+id/menuFragmento1"
-        android:title="Fragmento 1" />
+        android:title="Desayunos" />
     <item
         android:id="@+id/menuFragmento2"
-        android:title="Fragmento 2" />
+        android:title="Almuerzos" />
     <item
         android:id="@+id/menuFragmento3"
-        android:title="Fragmento 3" />
+        android:title="Bebidas" />
 
 </menu>

@@ -19,13 +19,16 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
         MyDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
+        MyDB.execSQL("create Table userdetails(name TEXT primary key, contact TEXT, dob TEXT)");
 
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase MyDB, int i, int i1) {
         MyDB.execSQL("drop Table if exists users");
-
+        MyDB.execSQL("drop Table if exists usersdetails");
+        onCreate(MyDB);
     }
 
     public Boolean insertData(String username, String password){
@@ -54,4 +57,73 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return false;
     }
-}
+
+    public Boolean insertuserdata (String name, String contact, String dob)
+    {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", name);
+        contentValues.put("contact", contact);
+        contentValues.put("dob", dob);
+
+        long result =MyDB.insert("usersdetails", null,contentValues);
+        if (result==-1){
+            return false;
+        }else{
+            return  true;
+        }
+    }
+
+
+    public Boolean updateuserdata (String name, String contact, String dob)
+    {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put ("contact", contact);
+        contentValues.put("dob", dob);
+        Cursor cursor = MyDB.rawQuery("select * from usersdetails  where name=?", new String[] {name});
+        if (cursor.getCount()>0)
+        {
+            long result = MyDB.update("usersdetails", contentValues, "name=?", new String[]{name});
+            if (result == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        }else {
+            return false;
+        }
+    }
+
+    public Boolean deletedata (String name)
+    {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+
+        Cursor cursor = MyDB.rawQuery("select * from usersdetails  where name=?", new String[] {name});
+        if (cursor.getCount()>0)
+        {
+            long result = MyDB.delete("usersdetails"    , "name=?", new String[]{name});
+            if (result == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        }else {
+            return false;
+        }
+    }
+
+
+    public Cursor getdata  ()
+    {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+
+        Cursor cursor = MyDB.rawQuery("select * from usersdetails", null);
+
+        return cursor;
+    }
+
+
+    }
+
+

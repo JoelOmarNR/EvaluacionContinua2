@@ -27,6 +27,21 @@
             android:text="Bienvenidos, ver menús"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/buttonPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:onClick="irActividad3"
+            android:text="Registrar Pedido"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="irAMenulistview"
+            android:text="VER MAS DETALLES" />
+
         <androidx.core.widget.NestedScrollView
             android:id="@+id/product_grid"
             android:layout_width="match_parent"

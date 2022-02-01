@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,13 +11,75 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#4CAF50"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/hello_blank_fragment"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvLista"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="¡Hello World!"
-       />
+        android:text="¡Hello World!" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="1300dp"
+        android:src="@drawable/cafeleche" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:textColor="#ffff"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="230dp"
+        android:textSize="30dp"
+        android:text="Café con Leche, S/ 10.00"
+        android:padding="15dp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:textColor="#ffff"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="580dp"
+        android:textSize="30dp"
+        android:text="Desayuno Esp. /s 15.00"
+        android:padding="15dp"/>
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="200dp"
+        android:layout_height="765dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/cafejugopan"
+        android:layout_gravity="right|bottom"
+        />
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="200dp"
+        android:layout_height="1020dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/cafeleche"
+        android:layout_gravity="right|bottom"
+        />
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="200dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/saltadodelomo" />
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="200dp"
+        android:layout_height="650dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/cevichemixto" />
+
 
 </FrameLayout>

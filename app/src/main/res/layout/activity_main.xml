@@ -11,61 +11,59 @@
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="User Name"
         android:layout_marginTop="50dp"
-        />
+        android:hint="User Name" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:layout_marginTop="50dp"
         android:layout_below="@+id/username"
-        />
+        android:layout_marginTop="50dp"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:helperText="al menos 4 caracteres" />
 
     <EditText
         android:id="@+id/repassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Retype Password"
-        android:layout_marginTop="50dp"
         android:layout_below="@+id/password"
-        />
+        android:layout_marginTop="50dp"
+        android:hint="Retype Password"
+        app:endIconMode="password_toggle"/>
 
     <Button
         android:id="@+id/btnsignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginTop="50dp"
         android:layout_below="@+id/repassword"
-        />
+        android:layout_marginTop="50dp"
+        android:text="Register" />
 
     <Button
         android:id="@+id/btnsignin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Existing user! Go to Sing in page"
-        android:layout_marginTop="50dp"
         android:layout_below="@+id/btnsignup"
-        />
+        android:layout_marginTop="50dp"
+        android:text="Existing user! Go to Sing in page" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="50dp"
+        android:layout_width="30dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/usuario" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="50dp"
+        android:layout_width="30dp"
         android:layout_height="250dp"
         app:srcCompat="@drawable/usuario" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="50dp"
+        android:layout_width="30dp"
         android:layout_height="430dp"
         app:srcCompat="@drawable/usuario" />
 

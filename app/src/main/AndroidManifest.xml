@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.loginsqlite">
         <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
             android:name=".Menulistview"
             android:exported="false" />
         <activity
